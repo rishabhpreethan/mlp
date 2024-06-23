@@ -1,3 +1,6 @@
+# How many features remain after applying following pipeline to the feature matrix?
+
+
 import pandas as pd
 import numpy as np
 from sklearn.compose import ColumnTransformer
