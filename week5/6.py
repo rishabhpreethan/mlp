@@ -4,10 +4,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Lasso
 from sklearn.metrics import r2_score
 
-# Load the dataset
 housing = fetch_california_housing()
 
-# Split the dataset into train and test sets with a 60:40 ratio
 X_train, X_test, y_train, y_test = train_test_split(housing.data, housing.target, test_size=0.4, random_state=1)
 
 # Scale the features
@@ -24,7 +22,6 @@ param_grid = {
 # Initialize the Lasso model
 lasso = Lasso()
 
-# Set up GridSearchCV
 grid_search = GridSearchCV(estimator=lasso, param_grid=param_grid, cv=6)
 
 # Train the model
